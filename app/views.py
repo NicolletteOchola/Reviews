@@ -41,4 +41,13 @@ def search_projects(request):
     message = "No term has been searched"
     return render(request, 'search.html', {"message": message})
 
+def get_project(request, id):
+  try:
+    project = Projects.objects.get(pk = id)
+
+  except ObjectDoesNotExist:
+    raise Http404()
+
+  return render(request, "projects.html", {"project":project})
+
 
