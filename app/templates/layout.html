@@ -1,0 +1,88 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  {% if title %}
+  <title>Reviews - {{title}}</title>
+  {% else %}
+  <title>Reviews</title>
+  {% endif %}
+
+  {% block styles %}
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/css/mdb.min.css" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
+  <link rel="stylesheet" href="{% static 'css/main.css' %}">
+
+  {% endblock %}
+</head>
+<body class="grey lighten-5">
+  {% include "navbar.html" %}
+
+  {% block scripts %}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- JQuery -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/js/mdb.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
+  <script type="text/javascript" src="{% static 'script.js' %}"></script>
+  {% endblock %}
+
+  <div class="mb-4 pb-4"></div>
+  <!-- Footer -->
+  <footer class="page-footer font-small bg-dark mt-4 pt-4">
+    <div class="container-fluid text-center text-md-left">
+      <div class="row">
+        <div class="col-md-6 mt-md-0 mt-3">
+          <h6 class="text-uppercase pl-2 ml-2">
+            Design | Innovation | Creativity
+          </h6>
+          <p>
+            <span class="font-weight-bold pl-2 ml-2">Connect with us:</span>
+            Twitter Facebook YouTube Instagram
+          </p>
+        </div>
+        <hr class="clearfix w-100 d-md-none pb-3">
+        <div class="col-md-3 mb-md-0 mb-3">
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!">About</a>
+            </li>
+            <li>
+              <a href="#!">Jobs</a>
+            </li>
+            <li>
+              <a href="#!">Winners</a>
+            </li>
+            <li>
+              <a href="#!">Nominees</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+    <div class="footer-copyright text-center py-3">
+      © 2020 Copyright.
+      <a href="https://github.com/NicolletteOchola">Nicollette Ochola</a>
+    </div>
+
+  </footer>
+
+</body>
+</html>
