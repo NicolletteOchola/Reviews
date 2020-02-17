@@ -2,7 +2,7 @@ from django.db import models
 import datetime as dt
 from django.contrib.auth.models import User
 from tinymce.models import HTMLField
-from PIL import image
+from PIL import Image
 from django_countries.fields import CountryField
 from star_ratings.models import Rating
 
@@ -58,9 +58,9 @@ class Projects(models.Model):
     return projects
 
   @classmethod
-  def get_by_author(cls, Author)
-  projects = cls.objects.filter(Author=Author)
-  return projects
+  def get_by_author(cls, Author):
+    projects = cls.objects.filter(Author=Author)
+    return projects
 
   @classmethod
   def get_project(request, id):

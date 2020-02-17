@@ -41,6 +41,10 @@ INSTALLED_APPS = [
     'tinymce',
     'crispy_forms',
     'bootstrap4',
+    'star_ratings',
+    'django_countries',
+    'rest_framework',
+
 ]
 
 MIDDLEWARE = [
