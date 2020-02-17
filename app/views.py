@@ -13,6 +13,11 @@ from rest_framework.views import APIView
 from .serializer import ProfileSerializer, ProjectSerializer
 
 def index(request):
+  date = dt.date.today()
+  projects = Projects.get_projects()
+  return render(request, 'index.html', {"date": date, "projects":projects})
+
+def register(request):
   if request.method == 'POST':
     from = RegisterForm(request.POST)
     if form.is_valid():
@@ -23,4 +28,3 @@ def index(request):
   else:
     form = RegisterForm()
   return render(request, 'registration/registration_form.html', {'form':form})
-   
