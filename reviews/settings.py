@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'app.apps.AppConfig',
     'tinymce',
     'crispy_forms',
-    'bootsrap4',
+    'bootstrap4',
 ]
 
 MIDDLEWARE = [
@@ -81,7 +81,7 @@ WSGI_APPLICATION = 'reviews.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgrsql',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'reviews',
         'USER': 'nicole',
         'PASSWORD': '1997'
