@@ -28,6 +28,15 @@
 <body class="grey lighten-5">
   {% include "navbar.html" %}
 
+  {% block content %} 
+    <div class="jumbotron jumbotron-fluid bg-light mb-1 pb-3 pt-3">
+        <div class="">
+          <h2 class="display-5 text-center font-weight-bold text-white">Welcome to Awwards</h2>
+        </div>
+      </div>
+    
+    {%endblock%}
+
   {% block scripts %}
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <!-- JQuery -->
@@ -39,7 +48,7 @@
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/js/mdb.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
-  <script type="text/javascript" src="{% static 'script.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
   {% endblock %}
 
   <div class="mb-4 pb-4"></div>
@@ -57,27 +66,11 @@
           </p>
         </div>
         <hr class="clearfix w-100 d-md-none pb-3">
-        <div class="col-md-3 mb-md-0 mb-3">
-          <!-- <ul class="list-unstyled">
-            <li>
-              <a href="#!">About</a>
-            </li>
-            <li>
-              <a href="#!">Jobs</a>
-            </li>
-            <li>
-              <a href="#!">Winners</a>
-            </li>
-            <li>
-              <a href="#!">Nominees</a>
-            </li> -->
-          </ul>
-        </div>
 
       </div>
 
     </div>
-    <div class="footer-copyright text-center py-3">
+    <div class="footer-copyright py-3" style="text-align: center;">
       © 2020 Copyright.
       <a href="https://github.com/NicolletteOchola">Nicollette Ochola</a>
     </div>
