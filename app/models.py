@@ -39,7 +39,7 @@ class Projects(models.Model):
   Author = models.ForeignKey(User, on_delete=models.CASCADE, blank=True)
   author_profile = models.ForeignKey(Profile,on_delete=models.CASCADE, blank=True, default='1')
   link = models.URLField()
-  country = CountryField(blank_label='(select country)', default='NG')
+  country = CountryField(blank_label='(select country)', default='KE')
 
   def save_project(self):
     self.save()
