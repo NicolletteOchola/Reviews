@@ -9,7 +9,7 @@ from star_ratings.models import Rating
 # Create your models here.
 
 class Profile(models.Model):
-  user = models.OneToOneField(User, on_delete=models.cascade)
+  user = models.OneToOneField(User, on_delete=models.CASCADE)
   bio = models.TextField(blank=True)
   photo = models.ImageField(upload_to='profile_pics/', blank=True, default='profile_pics/default.jpg')
 

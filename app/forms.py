@@ -17,7 +17,7 @@ class ProfileUpdateForm(forms.ModelForm):
     exclude = ['user']
     widgets = {'bio': forms.Textarea(attrs={'rows':2, 'cols':10,}),}
 
-class RegistrationForm(RegistrationForm):
+class RegisterForm(RegistrationForm):
   first_name = forms.CharField(max_length=255)
   last_name = forms.CharField(max_length=255)
 
@@ -25,10 +25,9 @@ class RegistrationForm(RegistrationForm):
     model = User
     fields = ('username', 'first_name', 'last_name', 'email', 'password1', 'password2',)
 
-    def __init__(self, *args, *kwargs):
+    def __init__(self, *args, **kwargs):
       super(RegistrationForm, self).__init__(*args, **kwargs)
       self.helper = FormHelper()
       for fieldname in ['username', 'password1', 'password2']:
         self.fields[fieldname].help_text = None
       self.helper.form_show_labels = True
-      

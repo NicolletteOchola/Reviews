@@ -19,7 +19,7 @@ def index(request):
 
 def register(request):
   if request.method == 'POST':
-    from = RegisterForm(request.POST)
+    form = RegisterForm(request.POST)
     if form.is_valid():
       form.save()
       username = form.cleaned_data.get('username')
@@ -90,8 +90,8 @@ class ProjectList(APIView):
     return Response(serializers.data)
 
 class ProfileList(APIView):
-  def(self, request, format=None):
+  def get(self, request, format=None):
     all_profile = Profile.objects.all()
     serializers = ProfileSerializer(all_profile, many=True)
     return Response(serializers.data)
-    
+
