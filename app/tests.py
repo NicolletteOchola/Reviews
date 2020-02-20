@@ -1,9 +1,11 @@
-from django.test import TestCase
+from django.test import TestCase, Client
 from .models import *
 from django.db import models
 from django.contrib.auth.models import User
 from django_countries.fields import CountryField
 
+
+# models tests
 class UserTest(TestCase):
   def setUp(self):
     self.nicole= User(first_name = 'Nicole', last_name = 'Ochola', email = 'nicoleochola@gmail.com')
@@ -27,3 +29,10 @@ class UserTest2(TestCase):
       u = self.create_user()
       self.assertTrue(isinstance(u, User))
 
+# view tests
+
+class TestCalls(TestCase):
+  def test_new_project(self):
+    response = self.client.get('/login/', follow=True)
+    self.assertEqual(response.status_code, 404)
+  
