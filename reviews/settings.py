@@ -86,7 +86,7 @@ WSGI_APPLICATION = 'reviews.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'reviews1',
+        'NAME': 'reviews3',
         'USER': 'nicole',
         'PASSWORD': '1997'
     }
@@ -145,4 +145,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
-LOGIN_REDIRECT_URL ='/'   
+LOGIN_REDIRECT_URL ='/'  
+STAR_RATINGS_RANGE = 5

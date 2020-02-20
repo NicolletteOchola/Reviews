@@ -7,6 +7,7 @@ from django_countries.fields import CountryField
 from star_ratings.models import Rating
 from django.http import Http404
 from django.db.models import ObjectDoesNotExist
+from django.db.models.signals import post_save
 
 # Create your models here.
 
@@ -14,6 +15,12 @@ class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     bio = models.TextField(blank=True)
     photo = models.ImageField(upload_to = 'profile_pics/', blank=True, default='profile_pics/default.jpg')
+
+    def create_profile(sender, **kwargs):
+        if kwargs['created']:
+            user_profile = Profile.objects.create(user=kwargs['instance'])
+    post_save.connect(create_profile, sender=User)
+
 
     def save_profile(self):
         self.save()

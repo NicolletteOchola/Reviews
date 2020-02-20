@@ -25,11 +25,14 @@ def index(request):
 def register(request):
     if request.method == 'POST':
         form = RegisterForm(request.POST)
-        profile = Profile.save_profile()
+      
         if form.is_valid():
             form.save()
             username = form.cleaned_data.get('username')
             messages.success(request, f'Account created for {username}')
+
+            # profile = Prollfile(username,"","")
+            # profile.save()
             return redirect('/')
         
     else:
