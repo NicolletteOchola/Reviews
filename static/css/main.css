@@ -1,11 +1,13 @@
 h1
 {
   color: black;
+  font-family: 'Cinzel Decorative', cursive;
 }
 
 html, body {
   position: relative;
   min-height: 100%;
+  font-family: 'Cinzel Decorative', cursive;
 }
 
 /* // Within style tags in your html file
