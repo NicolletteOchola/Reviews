@@ -149,5 +149,3 @@ LOGIN_REDIRECT_URL ='/'
 STAR_RATINGS_RANGE = 5
 STAR_RATINGS_RERATE = False 
 STAR_RATINGS_ANONYMOUS = True
-
-django_heroku.settings(locals())
