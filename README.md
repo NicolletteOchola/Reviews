@@ -29,6 +29,9 @@ Nicollette Ochola
 `$ git clone https://github.com/NicolletteOchola/Reviews.git`
 - Navigate to the folder
  `$ cd <folder/file name>`
+- create a virtual environment
+- download all the requirements using the command 
+ `$ python3.6 pip install -r requirements.txt`
 - To run the application;
  `$ python3.6 manage. runserver`
 
